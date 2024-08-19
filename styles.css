@@ -10,6 +10,7 @@
 
 
 .container {
+
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(135deg, #45006e, #a94fca);
@@ -18,8 +19,8 @@
  
 }
 .calculator {
-    width: 100%;
-    max-width: 600px;
+    width: 80%;
+    max-width: 700px;
     margin-left: 10%;
     margin-top: 5%;
 
@@ -85,9 +86,10 @@
 /* Media Queries for responsiveness */
 
 /* Small devices like smartphones (max-width: 600px) */
-@media (max-width: 650px) {
+@media (max-width: 760px) {
     .calculator {
         margin: 20px 2px; /* Remove excessive margins and add a small margin on smaller screens */
+        width: 100%;
     }
 
     .input-box {
@@ -216,7 +218,7 @@
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 650px) {
+@media (max-width: 760px) {
     .fun-facts {
         margin: 20px 0;
         padding: 15px;
