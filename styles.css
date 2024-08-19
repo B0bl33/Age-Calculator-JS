@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #45006e, #a94fca);
+    color: #fff;
+    padding: 10px;
+ 
+}
+.calculator {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 10%;
+    margin-top: 5%;
+
+}
+.calculator h1 {
+    font-size: 55px;
+}
+.calculator h1 span {
+    color: #76ff9b;
+}
+.input-box {
+    margin: 40px 0;
+    padding: 35px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    
+}
+.input-box input {
+    flex: 1;
+    margin-right: 20px;
+    padding: 14px 20px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+}
+.input-box button {
+    background: #76ff9b;
+    border: 0;
+    outline: 0;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+}
+.input-box input::-webkit-calendar-picker-indicator{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: auto;
+    position: absolute;
+    background-position: calc(100% - 10px);
+    background-size: 30px;
+    cursor: pointer;
+}
+
+#result {
+    font-size: 20px;
+}
+
+#result span {
+    color: #76ff9b;
+}
+
+
+
+/* Media Queries for responsiveness */
+
+/* Small devices like smartphones (max-width: 600px) */
+@media (max-width: 650px) {
+    .calculator {
+        margin: 20px 2px; /* Remove excessive margins and add a small margin on smaller screens */
+    }
+
+    .input-box {
+        flex-direction: column; /* Stack input and button vertically */
+        align-items: stretch; /* Make input and button take full width */
+        margin: 20px 0; /* Ensure there's spacing above and below the input box */
+    }
+
+    .input-box input {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add space below input */
+        width: 100%; /* Make input take full width */
+    }
+
+    .input-box button {
+        width: 100%; /* Make button take full width */
+    }
+
+    .calculator h1 {
+        font-size: 36px;
+        padding-top: 25px;
+    }
+
+    .input-box {
+        padding: 20px;
+    }
+
+    .input-box input {
+        font-size: 16px;
+    }
+
+    .input-box button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    #result {
+        font-size: 18px;
+    }
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        text-align: center;
+    }
+}
+
+/* Extra small devices like very small smartphones (max-width: 400px) */
+@media (max-width: 400px) {
+    .calculator {
+        margin: 2px; /* Further reduce margins for very small screens */
+    }
+
+    .calculator h1 {
+        font-size: 28px;
+    }
+
+    .input-box {
+        padding: 15px;
+    }
+
+    .input-box input {
+        font-size: 14px;
+    }
+
+    .input-box button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #result {
+        font-size: 16px;
+    }
+  
+}
+
+
+.fun-facts {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.fun-facts h2 {
+    color: #76ff9b;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.fun-facts p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation delay for sequential appearance */
+.fact:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.fact:nth-child(3) {
+    animation-delay: 1s;
+}
+.fact:nth-child(4) {
+    animation-delay: 1.5s;
+}
+.fact:nth-child(5) {
+    animation-delay: 2s;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 650px) {
+    .fun-facts {
+        margin: 20px 0;
+        padding: 15px;
+    }
+
+    .fun-facts h2 {
+        font-size: 28px;
+    }
+
+    .fun-facts p {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 400px) {
+    .fun-facts {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .fun-facts h2 {
+        font-size: 24px;
+    }
+
+    .fun-facts p {
+        font-size: 16px;
+    }
+}
